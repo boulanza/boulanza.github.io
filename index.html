@@ -1,7 +1,39 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    var secs = 20;
+    var linkedin = "https://www.linkedin.com/pub/zachary-boulanger/57/24b/75a";
+    var github = "https://github.com/boulanza";
+    function countdown() {
+      secs = secs - 1;
+      if (secs < 0) {
+        window.location = linkedin;
+      }
+      else {
+        $("timeLeft").innerHTML = secs;
+        window.setTimeout("countdown()", 1000);
+      }
+    }
+
+    $(window).load(function() {
+      $('#myModal').modal('show');
+    });
+  </script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div class="modal" id="myModal">
+    <div class="modal-header">
+    <h2>Sorry!</h2>
+    </div>
+    <div class="modal-body">
+      <p>My website is currently under construction. In <span id="timeLeft"></span> seconds
+        you will be sent to my <a href="https://www.linkedin.com/pub/zachary-boulanger/57/24b/75a">LinkedIn</a> profile,
+      unless you'd rather check out my <a href="https://github.com/boulanza">github</a> account instead.</p>
+    </div>
+  </div>
 </body>
 </html>
