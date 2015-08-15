@@ -4,8 +4,9 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
   <script type="text/javascript">
-    var secs = 20;
+    var secs = 15;
     var linkedin = "https://www.linkedin.com/pub/zachary-boulanger/57/24b/75a";
     var github = "https://github.com/boulanza";
     function countdown() {
@@ -14,26 +15,42 @@
         window.location = linkedin;
       }
       else {
-        $("timeLeft").innerHTML = secs;
+        $("#timeLeft").html(secs);
         window.setTimeout("countdown()", 1000);
       }
     }
 
-    $(window).load(function() {
+    $(document).ready(function(){
       $('#myModal').modal('show');
+      countdown();
     });
   </script>
 </head>
 <body>
   <div class="modal" id="myModal">
-    <div class="modal-header">
-    <h2>Sorry!</h2>
-    </div>
-    <div class="modal-body">
-      <p>My website is currently under construction. In <span id="timeLeft"></span> seconds
-        you will be sent to my <a href="https://www.linkedin.com/pub/zachary-boulanger/57/24b/75a">LinkedIn</a> profile,
-      unless you'd rather check out my <a href="https://github.com/boulanza">github</a> account instead.</p>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Sorry!</h3>
+      </div>
+      <div class="modal-body">
+        <p>
+          My website is currently under construction.
+        </p>
+        <p>
+          You will be redirected to my <a href="https://www.linkedin.com/pub/zachary-boulanger/57/24b/75a">LinkedIn
+          </a> profile in <strong><span id="timeLeft"></span> seconds</strong>. Or, if you want, you can visit
+          my <a href="https://github.com/boulanza">Github</a> account instead.
+        </p>
+        <p align="right">
+          Thanks for visiting!<br />
+          -Zach Boulanger
+        </p>
+      </div>
+      <div class="modal-footer">
+      </div>
     </div>
   </div>
+</div>
 </body>
 </html>
