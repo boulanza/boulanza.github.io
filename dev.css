@@ -28,6 +28,15 @@ nav {
 	height: 40px;
 }
 
+#heading {
+	background-color: #ffffff;
+	position: fixed;
+	margin: auto;
+  	top: 0;
+	left: 0;
+	right: 0;
+}
+
 a, nav a:visited {
 	color: #273798;
 	text-decoration: none;
@@ -37,16 +46,15 @@ a:hover {
 	color: #6E7FEB;
 }
 
-#heading {
-	position: fixed;
-	margin: auto;
-  	top: 0;
-	left: 0;
-	right: 0;
-	background-color: white;
+a.top {
+position: relative;
+top: -120px;
+display: block;
+height: 0;
+width: 0;
 }
 
-main {
+main { 
 	margin: 100px auto;
 	width: 800px;
 	padding: 10px;
