@@ -2,6 +2,8 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="dev.css">
+	<script   src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<script src="dev.js"></script>
 </head>
 <body>
 <div id="heading">
@@ -17,7 +19,7 @@
 <h1>Education</h1>
 <img src="umichlogo.png" width="100px" style="float: right;">
 <p>
-	<h3>University of Michigan (Fall 2012 - Spring 2017)</h3>
+	<h3>University of Michigan (Fall 2012 - Winter 2017)</h3>
 	Bachelor of Science in Engineering, Computer Science<br />
 	Minors in German and Multidisciplinary Design<br />
 	GPA: 3.08/4.00
@@ -34,17 +36,68 @@
 
 <a name="experience" class="top"></a>
 <h1>Experience</h1>
-<p>
-	<em>show with tab and hidden content. click a tab to show that content, click next to show that, etc.
+<div id="expBox">
+	<div id="expNav">
+	<h4>Work Experience</h4>
+	 <ul>
+	 	<li data-link="1" class="selectedLink">Consumers Energy</li>
+	 	<li data-link="2">Thomson Reuters</li>
+	 	<li data-link="3">University of Michigan</li>
+	 </ul>
+	 <h4>Leadership Experience</h4>
+	 <ul>
+	 	<li data-link="4">Living Arts</li>
+	 	<li data-link="5">A2RU Conferences</li>
+	 	<li data-link="6">OUT Technology</li>
+	 </ul>
+	</div>
+	<div id="exp1" class="expContent selectedContent">
+		<h3>Consumers Energy</h3>
+		<small><em>Applications Developer Intern (May 2014 - Aug 2014),
+		<br />Web Design Intern (June 2013 - Aug 2013)</em></small>
+		<p>
+			Paragraph about it here
+		</p>
+	</div>
+	<div id="exp2" class="expContent">
+		<h3>Thomson Reuters</h3>
+		<small><em>Software Engineering Intern (May 2015 - Dec 2015)
+		<br />Software Engineering Intern (May 2016 - Aug 2016)</em></small>
+		<p>
+			Here at Thomson Reuters Tax and Accounting, I worked on the full breadth and depth of software development. I helped plan projects and budget time for individual work items, implement these features on the front end, back end, and everything in between, and then follow it up afterwards with testing and bug fixes. I've primarily programmed in C#, but also wrote SQL when creating new database schema. We followed the Model-View-Presenter architectural pattern for the front-end, as the code abstraction and familiar pattern helps keep such a large code-base cleaner and easier to understand. Our environment of choice was Microsoft Visual Studio and SQL Server on a Windows machine, while Team Foundation Server was used for version control. Some examples of new features and projects I worked on are adding notifications to the product and adding new features in the payroll section specifically.
+		</p>
+	</div>
+	<div id="exp3" class="expContent">
+		<h3>University of Michigan</h3>
+		<small><em>Web Designer (Sept 2015 - Present)</em></small>
+		<p>
+			I am currently redesigning the website for ArtsEngine, an organization at the University of Michigan focused on the interdisciplinary intersection between the arts and engineering. I first worked at a child organization of ArtsEngine called Living Arts, where I did some minor website development before being hired as a student web designer at ArtsEngine itself to redesign their website entirely. I went through the process of designing wireframes with paper and pencil, higher definition mockups in adobe photoshop, and then a more advanced prototype done with HTML, CSS, and PHP, which I then presented to the organization. I previewed and tested my code using XAMPP. I am now in the process of moving over the old content, finishing up the redesign, and maintaining the current site. I do my programming in Sublime Text and often test the site first in Chrome and use their Developer Tools when needed.
+		</p>
+	</div>
+	<div id="exp4" class="expContent">
+		<h3>Living Arts</h3>
+		<small><em>Mentor, Executive/Alumni Boards Member (2012 - 2016)</em></small>
+		<p>
+			Paragraph about it here
+		</p>
+	</div>
+	<div id="exp5" class="expContent">
+		<h3>Alliance for the Arts in Research Universities</h3>
+		<small><em>Student Conference Advisor, Attendee (2013 - 2015)</em></small>
+		<p>
+			Paragraph about it here
+		</p>
+	</div>
+	<div id="exp6" class="expContent">
+		<h3>OUT Technology Conference</h3>
+		<small><em>Conference Attendee (2015)</em></small>
+		<p>
+			Paragraph about it here
+		</p>
+	</div>
+</div>
 
-	Split into categories: Work Experience, Leadership Experience
-
-	In each category:
-	work: Consumers Energy, Thomson Reuters, Arts Engine
-	leadership: Living Arts, A2RU Conferences, OUT Technology Conference
-
-	Each tab/section of content will include: Title/Name, Dates I was with, Link to website of place (in text, not title), short (1 sentence ideal, maybe 2) description of what it is, then last what I did.</em>
-</p>
+<div style="clear: both;"></div>
 
 <a name="projects" class="top"></a>
 <h1>Projects</h1>

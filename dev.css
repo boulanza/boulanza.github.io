@@ -57,8 +57,15 @@ h1 {
 }
 
 h3 {
-	color: #00000;
+	color: #1F315A;
 	margin-bottom: 0px;
+	font-size: 18px;
+}
+
+h4 {
+	color: #1F315A;
+	border-bottom: 1px solid #1F315A;
+	margin: 0px;
 	font-size: 18px;
 }
 
@@ -77,4 +84,43 @@ top: -120px;
 display: block;
 height: 0;
 width: 0;
+}
+
+/* expBox is container, expNav contiains ul li etc, then the content is exp# (1-6) 
+and they each have the class expContent, selectedLink is class for selected tab,
+selectedContent is class for selected content */
+
+#expNav {
+	float: left;
+	border-right: 1px solid black;
+	text-align: right;
+	padding: 10px;
+	width: 230px;
+	height: 475px;
+}
+
+#expNav ul {
+	list-style-type: circle;
+}
+
+#expNav ul li {
+	cursor: pointer;
+	color: #273798;
+}
+
+#expNav ul li:hover {
+	color: #6E7FEB;
+}
+
+#expNav ul li.selectedLink {
+	font-weight: bold;
+}
+
+.expContent {
+	display: none;
+	padding-left: 260px;
+}
+
+.expContent.selectedContent {
+	display: inherit;
 }
