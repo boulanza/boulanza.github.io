@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:400,600);
 
+@media screen and (max-width: 735px) {
+	nav { height: 80px; }
+}
+
 html, body { margin: 0; padding: 0; }
 
 body {
@@ -37,6 +41,27 @@ nav {
 	right: 0;
 }
 
+main { 
+	margin: 100px auto;
+	width: 800px;
+	padding: 10px;
+	text-align: justify;
+	font-size: 16px;
+}
+
+h1 {
+	color: #2E45D4;
+	border-bottom: 1px solid #2E45D4;
+	margin-bottom: 10px;
+	font-size: 25px;
+}
+
+h3 {
+	color: #00000;
+	margin-bottom: 0px;
+	font-size: 18px;
+}
+
 a, nav a:visited {
 	color: #273798;
 	text-decoration: none;
@@ -52,19 +77,4 @@ top: -120px;
 display: block;
 height: 0;
 width: 0;
-}
-
-main { 
-	margin: 100px auto;
-	width: 800px;
-	padding: 10px;
-	text-align: justify;
-	font-size: 16px;
-}
-
-h1 {
-	color: #2E45D4;
-	border-bottom: 1px solid #2E45D4;
-	margin-bottom: 10px;
-	font-size: 23px;
 }
