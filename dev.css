@@ -48,7 +48,7 @@ body {
 .main {
 	text-align: justify;
 	font-size: 16px;
-	padding-bottom: 25px;
+	padding-bottom: 50px;
 }
 
 h1 {
@@ -151,4 +151,13 @@ width: 0;
 
 .expContent p {
 	padding-top: 10px;
+}
+
+#contactSection {
+	display: flex;
+	justify-content: space-around;
+}
+
+hr {
+	border-color: #ccd1f4;
 }
