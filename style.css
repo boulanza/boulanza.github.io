@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,600);
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #FCFCFC;
+	padding-top: 150px;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		padding-top: 100px;
+	}
+}
+
+.padded {
+	position: relative;
+	top: 10px;
+}
+
+.navbar, .navbar-header, #links-navbar-collapse-1 {
+	text-align: center;
+	float: none;
+}
+
+#links-navbar-collapse-1 .nav {
+	float: none;
+}
+
+#links-navbar-collapse-1 .nav li {
+	display: inline-block;
+	float: none;
+	font-size: 20px;
+}
+
+.heading {
+	vertical-align: middle;
+	color: white;
+	font-size: 50px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+	text-shadow:
+		-1px -1px #2133a5,
+		-1px 1px #2133a5,
+		1px -1px #2133a5, 
+		3px 3px #2133a5;
+}
+
+.main {
+	text-align: justify;
+	font-size: 16px;
+	padding-bottom: 50px;
+}
+
+h1 {
+	color: #2133a5;
+	border-bottom: 1px solid #2133a5;
+	margin-bottom: 10px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+h3 {
+	color: #1F315A;
+	margin: 0px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+h4 {
+	color: #1F315A;
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom: 1px solid #1F315A;
+}
+
+a, nav a:visited {
+	color: #273798;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #6E7FEB;
+}
+
+a.top {
+position: relative;
+top: -120px;
+display: block;
+height: 0;
+width: 0;
+}
+
+.skillsContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.skillsSection {
+	flex: flex-grow;
+	width: 48%;
+}
+
+.progress {
+	display: inline-block;
+	width: 70%;
+}
+
+.progress-title {
+	float: left;
+	line-height: 25px;
+	padding-right: 5px;
+	width: 30%;
+}
+
+#expNav {
+	float: left;
+	text-align: center;
+	padding-right: 10px;
+	width: 265px;
+	height: 360px;
+}
+
+#expNav ul {
+	list-style-type: circle;
+}
+
+#expNav ul li {
+	cursor: pointer;
+	color: #273798;
+}
+
+#expNav ul li.active {
+	color: #FFFFFF;
+}
+
+#expNav ul li:hover {
+	background-color: #EEEEEE;
+}
+
+.expContent {
+	display: none;
+}
+
+.expContent.selectedContent {
+	display: inherit;
+	height: 340px;
+	overflow: auto;
+	padding-right: 5px;
+	margin-top: 15px;
+}
+
+.expContent p {
+	padding-top: 10px;
+}
+
+#contactSection {
+	display: flex;
+	justify-content: space-around;
+}
+
+hr {
+	border-color: #ccd1f4;
+}

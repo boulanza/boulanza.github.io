@@ -1,54 +1,263 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 
-  <script type="text/javascript">
-    var secs = 15;
-    var linkedin = "https://www.linkedin.com/pub/zachary-boulanger/57/24b/75a";
-    var github = "https://github.com/boulanza";
-    function countdown() {
-      secs = secs - 1;
-      if (secs < 0) {
-        window.location = linkedin;
-      }
-      else {
-        $("#timeLeft").html(secs);
-        window.setTimeout("countdown()", 1000);
-      }
-    }
+  <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <script src="bootstrap/js/bootstrap.min.js"></script>
 
-    $(document).ready(function(){
-      $('#myModal').modal('show');
-      countdown();
-    });
-  </script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
-  <div class="modal" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Sorry!</h3>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- These get shown no matter what -->
+      <div class="navbar-header col-xs-12">
+        <button type="button" class="navbar-toggle collapsed padded" data-toggle="collapse" data-target="#links-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <span class="heading">ZACHARY BOULANGER</span>
       </div>
-      <div class="modal-body">
-        <p>
-          My website is currently under construction.
-        </p>
-        <p>
-          You will be redirected to my <a href="https://www.linkedin.com/pub/zachary-boulanger/57/24b/75a">LinkedIn </a> profile in <strong><span id="timeLeft"></span> seconds</strong>. Or, if you want, you can visit my <a href="https://github.com/boulanza">Github</a> account instead. If you are curious to see how the development and design of my website are coming along, you can see what I'm up to <a href="dev.html">here</a>.
-        </p>
-        <p align="right">
-          Thanks for visiting!<br />
-          -Zach Boulanger
-        </p>
-      </div>
-      <div class="modal-footer">
+
+      <!-- These are the rest of the links that get toggled away -->
+      <div class="collapse navbar-collapse" id="links-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="">Home</a></li>
+          <li><a href="#edu">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
     </div>
+  </nav>
+
+  <div class="container col-xs-12 col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 main">
+    <p>
+      <img src="images/me.jpg" width="150px" style="float: left; margin: 0px 10px; border-radius: 50px;"> Hello, my name is Zach Boulanger, and in April 2017 I will be graduating from the University of Michigan with a Bachelor's Degree in Computer Science and minors in German and Multidisciplinary Design. While I have gathered a lot of professional and academic experience in software development in the application and web environments, I'm most passionate about working in interdisciplinary teams and being able to flex both my creative and technical muscles. I am currently very interested in learning more about entry-level positions with companies that share these ideals.
+    </p>
+
+    <a name="edu" class="top"></a>
+    <h1>Education</h1>
+    <img src="images/umichlogo.png" width="80px" style="float: right;">
+    <p>
+      <h3>University of Michigan (Fall 2012 - Winter 2017)</h3>
+      Bachelor of Science in Engineering, Computer Science<br />
+      Minors in German and Multidisciplinary Design<br />
+      GPA: 3.08/4.00
+    </p>
+    <p>
+      <strong>Favorite Coursework:</strong> Web Databases and Information Systems, Mobile Phone Development and Orchestra, Computer Security, Multidisciplinary Software Development, Graphic Design, Artificial Intelligence, Doing Business in German
+    </p>
+
+    <a name="skills" class="top"></a>
+    <h1>Skills</h1>
+    <div class="skillsContainer">
+    <div class="skillsSection">
+    <h4>Technical</h4>
+    <span class="progress-title">Windows:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%;">4/5</div>
+    </div><br />
+
+    <span class="progress-title">Linux:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%;">3/5</div>
+    </div><br />
+
+    <span class="progress-title">Agile:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%;">4/5</div>
+    </div><br />
+
+    <span class="progress-title">Visual Studio:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%;">4/5</div>
+    </div><br />
+
+    <span class="progress-title">Sublime Text:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%;">3/5</div>
+    </div><br />
+
+    <span class="progress-title">TFS:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5" style="width: 40%;">2/5</div>
+    </div><br />
+
+    <span class="progress-title">Git:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%;">3/5</div>
+    </div><br />
+
+    <span class="progress-title">Photoshop:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%;">4/5</div>
+    </div><br />
+
+    </div>
+    <div class="skillsSection">
+    <h4>Languages</h4>
+    <span class="progress-title">C#:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%;">4/5</div>
+    </div><br />
+
+    <span class="progress-title">C++:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%;">3/5</div>
+    </div><br />
+
+    <span class="progress-title">HTML/CSS:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%;">4/5</div>
+    </div><br />
+
+    <span class="progress-title">Javascript:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%;">3/5</div>
+    </div><br />
+
+    <span class="progress-title">Bootstrap:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5" style="width: 40%;">2/5</div>
+    </div><br />
+
+    <span class="progress-title">Python:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5" style="width: 40%;">2/5</div>
+    </div><br />
+
+    <span class="progress-title">SQL:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%;">3/5</div>
+    </div><br />
+
+    <span class="progress-title">German:</span>
+    <div class="progress">
+      <div class="progress-bar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%;">3/5</div>
+    </div><br />
+
+    </div>
+    </div>
+
+    <a name="experience" class="top"></a>
+    <h1>Experience</h1>
+    <div id="expBox">
+      <div id="expNav">
+        <div class="panel panel-default">
+        <div class="panel-heading"><h3>Work Experience</h3></div>
+         <ul class="list-group">
+          <li data-link="3" class="list-group-item active">University of Michigan</li>
+          <li data-link="2" class="list-group-item">Thomson Reuters</li>
+          <li data-link="1" class="list-group-item">Consumers Energy</li>
+         </ul>
+        <div class="panel-heading"><h3>Leadership Experience</h3></div>
+         <ul class="list-group">
+          <li data-link="6" class="list-group-item">OUT Technology</li>
+          <li data-link="5" class="list-group-item">A2RU Conferences</li>
+          <li data-link="4" class="list-group-item">Living Arts</li>
+         </ul>
+        </div>
+      </div>
+      <div id="exp1" class="expContent">
+        <h3>Consumers Energy</h3>
+        <small><em>Applications Developer Intern (May 2014 - Aug 2014),
+        <br />Web Design Intern (June 2013 - Aug 2013)</em></small>
+        <p>
+          During my first summer with Consumers Energy, I worked for the Workforce Engagement and Strategy Team, where I helped them launch a new web-based learning system on the internal websites of different teams across the company. I created and updated these websites using Microsoft Sharepoint, HTML, CSS, and Javascript. I also re-designed other parts of the websites as a whole in order to make them easier to use and to draw attention to the new features I was adding, as well as the older but still widely used ones.
+        </p>
+        <p>
+
+          During my second summer with them, I worked on the Applications Development team. There, I programmed primarily in .NET (using C#, ASP.NET, Model-View-Controller Patterns, etc) and SAP (using ABAP). I often pair-programmed with other developers and helped work on anything from the SAP backend to the .NET front end of their various applications. An example of a project I worked on while I was there was an automatic export of project cards from their Leankit Kanban board, which helped their Agile process become more efficient. This program would run on a server and automatically pull the data from the online board and then upload it to their internal sharepoint website. This freed up space on the site, helped it run quicker, and also freed up the time of the managers who previously had to do this work by hand.
+        </p>
+      </div>
+      <div id="exp2" class="expContent">
+        <h3>Thomson Reuters</h3>
+        <small><em>Software Engineering Intern (May 2015 - Dec 2015)
+        <br />Software Engineering Intern (May 2016 - Aug 2016)</em></small>
+        <p>
+          Here at Thomson Reuters Tax and Accounting, I worked on the full breadth and depth of software development. I helped plan projects and budget time for individual work items, implement these features on the front end, back end, and everything in between, and then follow it up afterwards with testing and bug fixes. I've primarily programmed in C#, but also wrote SQL when creating new database schema. We followed the Model-View-Presenter architectural pattern for the front-end, as the code abstraction and familiar pattern helps keep such a large code-base cleaner and easier to understand. Our environment of choice was Microsoft Visual Studio and SQL Server on a Windows machine, while Team Foundation Server was used for version control.
+        </p>
+        <p>
+          I worked on two main projects over the course of my time here, one of which was adding a notifications system to the software and the other was adding an entirely new feature that was partially based off of existing functionality. Some examples of my contributions to these projects are: creating the custom dialog architecture that many notifications would use, modifying the emailer service to take in HTML while remaining secure, and creating an entirely new payroll schedule calculation engine based off of and integrated with existing code but implemented for an entirely new feature.
+        </p>
+      </div>
+      <div id="exp3" class="expContent selectedContent">
+        <h3>University of Michigan</h3>
+        <small><em>Web Designer (Sept 2015 - Present)</em></small>
+        <p>
+          I am currently redesigning the website for ArtsEngine, an organization at the University of Michigan focused on the interdisciplinary intersection between the arts and engineering. I first worked at a child organization of ArtsEngine called Living Arts, where I did some minor website development before being hired as a student web designer at ArtsEngine itself to redesign their website entirely. I went through the process of designing wireframes with paper and pencil, higher definition mockups in adobe photoshop, and then a more advanced prototype done with HTML, CSS, and PHP, which I then presented to the organization. I previewed and tested my code using XAMPP. I am now in the process of moving over the old content, finishing up the redesign and implementing it, and maintaining the current site. I do my programming in Sublime Text and often test the site first in Chrome and use their Developer Tools when needed before testing in other browsers.
+        </p>
+      </div>
+      <div id="exp4" class="expContent">
+        <h3>Living Arts</h3>
+        <small><em>Mentor, Executive/Alumni Boards Member (2012 - 2016)</em></small>
+        <p>
+          Living Arts is a living/learning community at the University of Michigan where students of all different disciplines come together to explore innovation and creativity. Upperclassmen mentor freshmen in monthly problem-solving/creative activities and a year-long project centered around innovation. I joined as a freshman in 2012, where I became the freshmen representative on the student executive board, which planned events both for our community and for outreach. As a sophomore in 2013, I stayed on as a mentor in the program. After "graduating" it that year, I have since joined the alumni board, which focuses on planning events to bring alumni and current students together. I also led a Website Workshop for students in the program three times, where I helped teach them how to create their very own website using HTML and CSS.
+        </p>
+      </div>
+      <div id="exp5" class="expContent">
+        <h3>Alliance for the Arts in Research Universities</h3>
+        <small><em>Student Conference Advisor, Attendee (2013 - 2015)</em></small>
+        <p>
+          The Alliance for the Arts in Research Universities (A2RU) is a new national organization that focuses on the place and importance of the arts in academics, technology, research, and community. In 2013 they launched their Emerging Creatives conference for students. I, along with one other student, was chosen to represent students and help plan this conference. I then attended it that year as well as in 2014 and helped out with planning/setup again in 2015. During the conference, students would identify a problem and then work on developing a solution during the weekend-long event. My first year, my group made an app that would ask you questions about what you did during the day and then give you the chance you had of dying that day by measuring the "danger" of said activities. The message of it was supposed to be for you to live life to the fullest since you never know what could happen. The second year my group aimed to revamp the education system. We developed a program for high schools that would connect local business, students, and community leaders together to help foster increased community activity and help keep students engaged.
+        </p>
+      </div>
+      <div id="exp6" class="expContent">
+        <h3>OUT For Undergrad Technology Conference</h3>
+        <small><em>Conference Attendee (2015)</em></small>
+        <p>
+          The OUT For Undergad Technology Conference is a conference that brings top-performing LGBTQ students from around the country together with industry professionals. There, we learned from them about what the tech and corporate worlds are like for LGBTQ people and how we can embrace our identities in a professional setting. We also learned about many top companies and their specific areas of tech, whether it be UI/UX, software engineering, Frontend/Backend development, or anything else.
+        </p>
+      </div>
+    </div>
+
+    <a name="projects" class="top"></a>
+    <h1>Projects</h1>
+    <p>
+      <h3>Complex Search Visualization</h3>
+      As a part of the Multidisciplinary Design Program, I am part of a student team working with the company ProQuest to design and implement a Web Visualization Tool for Complex Searches. Pharmaceutical companies use ProQuest Dialog to support regulation compliance. Professionals at these companies form very complicated search strategies that can be pages long in order to do a needle-in-a-haystack type search on medical databases.
+    </p>
+    <p>
+      The purpose of this project is to build a visualization tool/user interface that improves the efficiency of the search process resulting in easier user implementation of correct searches and faster searches that utilize less search engine resources. We are designing, implementing, testing, and planning for the roll-out of this tool. On the front-end, we are using javascript and libraries like D3 in order to visualize these complex, nested search queries and subqueries. The backend uses Java in order to process and "score" these queries, to better help the user understand them. This is a year-long project that I am doing as my senior design project.
+    </p>
+    <p>
+      <h3>zachboulanger.me</h3>
+      This website was also a large personal project of mine. It has gone through many design iterations and reworks until I finally reached a product that I am happy with - for now. I have no doubt that I will continue refining and revamping this site for as long as I keep paying the hosting fee!
+    </p>
+    <p>
+      Many of the coding and design changes I have gone through can be seen on my <a href="https://github.com/boulanza">github account</a>. In fact, two different repositories on there were devoted to an original version of this site before I finally settled on the current design, housed in the repo boulanza.github.io. This isn't even all of the versions of this website that I have! After a few attempts of just coding a version of what I saw in my head and then realizing I didn't like how it looked on the screen, I finally decided that that wasn't working and took a step back to approach the design in a better, more professional way. I started sketching on paper before moving to designing mockups in photoshop. This allowed me to test various designs out before coding them, which meant I wasted a lot less time and finally decided on a design I liked and could implement. It obviously changed and was revised after I started coding - especially after I discovered Bootstrap - but it definitely made the design and development process easier and more efficient.
+    </p>
+    <p>
+      <h3>ArtsEngine Website Redesign</h3>
+      Another project I'd like to highlight on this page is my redesign of the ArtsEngine website. <a href="http://artsengine.umich.edu/">ArtsEngine</a> is an organization at the University of Michigan that fosters and champions the collaborative creative production of students and faculty through making, instruction, research, community, and the arts. I was hired into their organization as a student web designer after I did some web design work for a child organization of their's, Living Arts.
+    </p>
+    <p>
+      This was a great experience because, while I was still the primary mind behind the redesign and development work like I was for my own personal website, I now had a boss and coworkers who had ideas and feedback of their own. I followed a similar process to the successful one I found above (as these were happening largely in tandem), albeit with some minor alterations. First, I worked with my boss to figure out exactly what she wanted in the redesign, what she liked and didn't like, what content she wanted to have on it, etc. I then followed this up with pencil-and-paper sketches to get a rough idea before moving on to photoshop mockups. Then, I implemented a basic test version using HTML/CSS that included the home page and example content pages before finally moving into the implementation phase. I then was able to move all of the content from the old site to the new one as well as add the new content, just in time for our launch at the beginning of September before school started! It was a very exciting process and I look forward to continuing to develop and refine their website throughout the coming school year.
+    </p>
+
+    <a name="contact" class="top"></a>
+    <h1>Contact</h1>
+    <p>
+      If you'd like to get in touch with or learn more about me, feel free to send me an email or visit my profiles on LinkedIn or Github.
+    </p>
+    <div id="contactSection">
+      <span><img src="images/email.png" width="32px"> <em><a href="mailto:boulanza@umich.edu">boulanza@umich.edu</a></em></span>
+
+      <span><img src="images/linkedin.png" width="32px"> <em><a href="https://www.linkedin.com/in/zacharyboulanger">/zacharyboulanger</a></em></span>
+
+      <span><img src="images/github.png" width="32px"> <em><a href="https://github.com/boulanza">/boulanza</a></em></span>
+    </div>
+
+    <hr />
   </div>
-</div>
 </body>
 </html>
